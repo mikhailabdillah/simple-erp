@@ -66,7 +66,6 @@ export default function Home() {
               className="size-full rounded-xl object-cover"
               height={1024}
               preload
-              sizes="(max-width: 768px) 100vw, (max-width: 1200px) 50vw, 33vw"
               src={"/dashboard.png"}
               width={1536}
             />

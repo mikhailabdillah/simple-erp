@@ -3,6 +3,7 @@ import { Figtree, Inter } from "next/font/google";
 import type { Metadata } from "next";
 import "./globals.css";
 import { cn } from "@/lib/utils";
+import Provider from "./Provider";
 
 const figtreeHeading = Figtree({
   subsets: ["latin"],
@@ -32,7 +33,7 @@ export default function RootLayout({
           figtreeHeading.variable
         )}
       >
-        {children}
+        <Provider>{children}</Provider>
       </body>
     </html>
   );
