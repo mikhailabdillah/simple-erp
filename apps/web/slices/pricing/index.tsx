@@ -37,14 +37,14 @@ const Pricing = () => {
           >
             <Card className="bg-neutral-950 text-white">
               <CardHeader>
-                <CardTitle>Free</CardTitle>
+                <CardTitle>Basic</CardTitle>
                 <CardDescription>
                   Best for individuals and early-stage startups
                 </CardDescription>
                 <div className="flex w-full flex-col gap-6">
                   <div className="flex items-baseline gap-2">
                     <span className="font-medium text-5xl text-foreground tracking-tight">
-                      $0
+                      $10
                     </span>
                     <span className="text-base text-muted-foreground">
                       / per month
@@ -62,19 +62,19 @@ const Pricing = () => {
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Basic workflow tools
+                      Record incoming goods
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Task and project tracking
+                      Record outgoing goods
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Limited integrations
+                      Record profits
                     </span>
                   </li>
                 </ul>
@@ -88,7 +88,7 @@ const Pricing = () => {
           >
             <Card className="bg-neutral-950 text-white">
               <CardHeader>
-                <CardTitle>Basic</CardTitle>
+                <CardTitle>Business</CardTitle>
                 <CardDescription>
                   Best for growing teams and small businesses
                 </CardDescription>
@@ -113,19 +113,19 @@ const Pricing = () => {
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Everything in Free
+                      Everything in Basic Tier
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Advanced workflows
+                      Analyze sales results using charts
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Limited integrations
+                      24/7 support
                     </span>
                   </li>
                 </ul>
@@ -139,7 +139,7 @@ const Pricing = () => {
           >
             <Card className="bg-white text-neutral-950">
               <CardHeader>
-                <CardTitle>Scale</CardTitle>
+                <CardTitle>Entrepreneur</CardTitle>
                 <CardDescription>
                   Built for teams ready to scale operations
                 </CardDescription>
@@ -167,19 +167,19 @@ const Pricing = () => {
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Basic workflow tools
+                      Everything in Business Tier
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Task and project tracking
+                      Export data to Excel
                     </span>
                   </li>
                   <li className="flex items-center gap-3">
                     <IconCheck className="size-4" />
                     <span className="font-normal text-base text-muted-foreground">
-                      Limited integrations
+                      AI-based revenue prediction
                     </span>
                   </li>
                 </ul>
