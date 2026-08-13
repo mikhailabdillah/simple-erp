@@ -1,65 +1,78 @@
+import { GrainGradient } from "@paper-design/shaders-react";
+import {
+  IconArrowNarrowRight,
+  IconPlayerPlayFilled,
+} from "@tabler/icons-react";
 import Image from "next/image";
+import { Button } from "@/components/ui/button";
+import { Slices } from "@/slices";
 
 export default function Home() {
   return (
-    <div className="flex flex-1 flex-col items-center justify-center bg-zinc-50 font-sans dark:bg-black">
-      <main className="flex w-full max-w-3xl flex-1 flex-col items-center justify-between bg-white px-16 py-32 sm:items-start dark:bg-black">
-        <Image
-          alt="Next.js logo"
-          className="dark:invert"
-          height={20}
-          priority
-          src="/next.svg"
-          width={100}
+    <main>
+      <div className="absolute inset-0 -z-10 size-full">
+        <GrainGradient
+          className="size-full"
+          colorBack="#000000"
+          colors={["#c6d8f6", "#8ab8f0", "#3797eb"]}
+          intensity={0.41}
+          noise={0.29}
+          shape="corners"
+          softness={0.81}
+          speed={1.18}
         />
-        <div className="flex flex-col items-center gap-6 text-center sm:items-start sm:text-left">
-          <h1 className="max-w-xs font-semibold text-3xl text-black leading-10 tracking-tight dark:text-zinc-50">
-            To get started, edit the page.tsx file.
-          </h1>
-          <p className="max-w-md text-lg text-zinc-600 leading-8 dark:text-zinc-400">
-            Looking for a starting point or more instructions? Head over to{" "}
-            <a
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-              href="https://vercel.com/templates?framework=next.js&utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            >
-              Templates
-            </a>{" "}
-            or the{" "}
-            <a
-              className="font-medium text-zinc-950 dark:text-zinc-50"
-              href="https://nextjs.org/learn?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            >
-              Learning
-            </a>{" "}
-            center.
-          </p>
+      </div>
+      <div className="relative mt-40 mb-20 w-full text-white">
+        <div className="flex flex-col items-center justify-center py-24 text-center">
+          <div className="container mx-auto max-w-4xl px-4">
+            <h1 className="mb-6 text-6xl">
+              Boost Business Efficiency With Our ERP solutions
+            </h1>
+            <p className="mb-10 text-lg opacity-70">
+              Our ERP solutions designed to streamline operations, enhance
+              collaboration.
+            </p>
+            <div>
+              <Button
+                className="h-16 rounded-full bg-white text-base text-black"
+                size="lg"
+                variant={"ghost"}
+              >
+                Get Free Trial{" "}
+                <span className="ms-4 inline-flex size-10 items-center justify-center rounded-full bg-black text-white">
+                  <IconArrowNarrowRight className="size-5" />
+                </span>
+              </Button>
+              <Button
+                className="rounded-full text-base text-white"
+                size="lg"
+                variant={"link"}
+              >
+                <span className="inline-flex size-14 items-center justify-center rounded-full bg-white text-black">
+                  <IconPlayerPlayFilled className="size-5" />
+                </span>
+                Watch Demo
+              </Button>
+            </div>
+          </div>
         </div>
-        <div className="flex flex-col gap-4 font-medium text-base sm:flex-row">
-          <a
-            className="flex h-12 w-full items-center justify-center gap-2 rounded-full bg-foreground px-5 text-background transition-colors hover:bg-[#383838] md:w-39.5 dark:hover:bg-[#ccc]"
-            href="https://vercel.com/new?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
+      </div>
+      {/* Dashboard image */}
+      <div className="-translate-y-20">
+        <div className="container mx-auto px-4">
+          <div className="rounded-2xl bg-white/10 p-6 backdrop-blur-md">
             <Image
-              alt="Vercel logomark"
-              className="dark:invert"
-              height={16}
-              src="/vercel.svg"
-              width={16}
+              alt="Dashboard ERP system"
+              className="size-full rounded-xl object-cover"
+              height={1024}
+              src={"/dashboard.png"}
+              width={1536}
             />
-            Deploy Now
-          </a>
-          <a
-            className="flex h-12 w-full items-center justify-center rounded-full border border-black/8 border-solid px-5 transition-colors hover:border-transparent hover:bg-black/4 md:w-39.5 dark:border-white/[.145] dark:hover:bg-[#1a1a1a]"
-            href="https://nextjs.org/docs?utm_source=create-next-app&utm_medium=appdir-template-tw&utm_campaign=create-next-app"
-            rel="noopener noreferrer"
-            target="_blank"
-          >
-            Documentation
-          </a>
+          </div>
         </div>
-      </main>
-    </div>
+      </div>
+      {/* Clients */}
+      <Slices.clients />
+    </main>
   );
 }
