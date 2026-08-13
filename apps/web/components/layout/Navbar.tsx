@@ -16,15 +16,15 @@ import {
 const navLinks = [
   {
     label: "About",
-    url: "#",
+    url: "#about",
   },
   {
     label: "Pricing",
-    url: "#",
+    url: "#pricing",
   },
   {
     label: "Contact",
-    url: "#",
+    url: "#contact",
   },
 ];
 
@@ -36,7 +36,7 @@ const Navbar = () => {
     <header
       className={cn(
         "fixed top-0 z-50 w-full transition-all duration-300",
-        position.y > offset ? "bg-black" : "bg-transparent"
+        position.y > offset ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
       )}
     >
       <div className="container mx-auto h-20 px-4">

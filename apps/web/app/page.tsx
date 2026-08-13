@@ -13,7 +13,7 @@ export default function Home() {
       <div className="absolute inset-0 -z-10 size-full">
         <GrainGradient
           className="size-full"
-          colorBack="#000000"
+          colorBack="#101010"
           colors={["#c6d8f6", "#8ab8f0", "#3797eb"]}
           intensity={0.41}
           noise={0.29}
@@ -72,8 +72,11 @@ export default function Home() {
           </div>
         </div>
       </div>
-      {/* Clients */}
       <Slices.clients />
+      <Slices.services />
+      <Slices.about />
+      <Slices.pricing />
+      <Slices.contact />
     </main>
   );
 }
