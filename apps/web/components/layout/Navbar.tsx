@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useScrollPosition } from "@/hooks/useScrollPosition";
 import { cn } from "@/lib/utils";
-import { Button } from "../ui/button";
+import LoginPopup from "../popup/Login";
 
 const Navbar = () => {
   const position = useScrollPosition();
@@ -52,7 +52,7 @@ const Navbar = () => {
             </ul>
           </nav>
           <div className="flex justify-end">
-            <Button className={"rounded-full"}>Login / Register</Button>
+            <LoginPopup />
           </div>
         </div>
       </div>
