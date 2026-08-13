@@ -4,6 +4,8 @@ import {
   IconDeviceAnalytics,
   IconForklift,
 } from "@tabler/icons-react";
+import SlideElement from "@/components/animation/SlideElement";
+import TextExpand from "@/components/animation/TextExpand";
 import { Button } from "@/components/ui/button";
 
 const items = [
@@ -33,11 +35,19 @@ const Services = () => {
   return (
     <section id={"services"}>
       <div className="container mx-auto px-4 py-24">
+        <h2 className="mb-12">
+          <TextExpand>Our services</TextExpand>
+        </h2>
         <div className="grid grid-cols-2 gap-6 lg:grid-cols-4">
-          {items.map((item) => (
-            <div
+          {items.map((item, index) => (
+            <SlideElement
               className="group relative border border-white/10 bg-neutral-950 p-6 backdrop-blur-md transition-colors duration-300 hover:bg-white/2"
               key={item.title}
+              transition={{
+                delay: 0.3 * index + 0.2,
+                duration: 0.5,
+                ease: "easeInOut",
+              }}
             >
               <div className="absolute top-0 left-0 h-2 w-2 border-white/40 border-t border-l" />
               <div className="absolute right-0 bottom-0 h-2 w-2 border-white/40 border-r border-b" />
@@ -55,7 +65,7 @@ const Services = () => {
                   Learn More
                 </Button>
               </div>
-            </div>
+            </SlideElement>
           ))}
         </div>
       </div>

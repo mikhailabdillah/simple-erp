@@ -7,6 +7,8 @@ import {
   IconPhone,
 } from "@tabler/icons-react";
 import Link from "next/link";
+import SlideElement from "@/components/animation/SlideElement";
+import TextExpand from "@/components/animation/TextExpand";
 import { Button } from "@/components/ui/button";
 
 const Contact = () => {
@@ -15,14 +17,27 @@ const Contact = () => {
       <div className="container mx-auto px-4 py-24">
         <div className="grid grid-cols-1 items-center gap-12 lg:grid-cols-2">
           <div className="order-2 lg:order-1">
-            <h2 className="mb-4">Let&apos;s Start Something Great</h2>
+            <h2 className="mb-4">
+              <TextExpand
+                transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+              >
+                Let's Start Something Great
+              </TextExpand>
+            </h2>
             <p className="mb-10 opacity-60">
-              Ready to supercharge your business with our intuitive ERP
-              solution? Let&apos;s talk about how we can help you streamline
-              operations, boost efficiency, and drive real growth. Drop us a
-              line and let&apos;s create something amazing together.
+              <TextExpand
+                transition={{ delay: 0.4, duration: 0.5, ease: "easeInOut" }}
+              >
+                Ready to supercharge your business with our intuitive ERP
+                solution? Let's talk about how we can help you streamline
+                operations, boost efficiency, and drive real growth. Drop us a
+                line and let's create something amazing together.
+              </TextExpand>
             </p>
-            <div className="space-y-6">
+            <SlideElement
+              className="space-y-6"
+              transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+            >
               <div className="grid grid-cols-1 items-start gap-3 md:grid-cols-2">
                 <div className="flex items-center gap-3">
                   <div className="flex size-14 items-center justify-center rounded-lg bg-white/10">
@@ -84,9 +99,13 @@ const Contact = () => {
                   ))}
                 </div>
               </div>
-            </div>
+            </SlideElement>
           </div>
-          <div className="order-1">
+          <SlideElement
+            className="order-1"
+            direction="toLeft"
+            transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+          >
             <div className="relative border border-white/10 bg-neutral-950 p-8 backdrop-blur-md transition-colors duration-300 hover:bg-white/2">
               <div className="absolute top-0 left-0 h-2 w-2 border-white/40 border-t border-l" />
               <div className="absolute right-0 bottom-0 h-2 w-2 border-white/40 border-r border-b" />
@@ -123,7 +142,7 @@ const Contact = () => {
                 </Button>
               </div>
             </div>
-          </div>
+          </SlideElement>
         </div>
       </div>
     </section>

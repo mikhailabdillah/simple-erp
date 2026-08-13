@@ -122,10 +122,10 @@
     @apply border-border outline-ring/50;
   }
   html {
-    @apply scroll-smooth;
+    @apply scroll-smooth h-full;
   }
   body {
-    @apply bg-background text-foreground font-sans;
+    @apply bg-background text-foreground font-sans m-0 p-0;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {

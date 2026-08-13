@@ -13,8 +13,8 @@ const figtreeHeading = Figtree({
 const inter = Inter({ subsets: ["latin"], variable: "--font-sans" });
 
 export const metadata: Metadata = {
-  description: "Simple ERP",
-  title: "Simple ERP",
+  description: "Simple ERP landing page",
+  title: "Simple ERP landing page",
 };
 
 export default function RootLayout({

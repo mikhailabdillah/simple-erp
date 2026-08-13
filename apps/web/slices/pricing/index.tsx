@@ -1,4 +1,6 @@
 import { IconArrowNarrowRight, IconCheck } from "@tabler/icons-react";
+import SlideElement from "@/components/animation/SlideElement";
+import TextExpand from "@/components/animation/TextExpand";
 import { Button } from "@/components/ui/button";
 import {
   Card,
@@ -13,17 +15,26 @@ const Pricing = () => {
     <section id="pricing">
       <div className="container mx-auto px-4 py-24">
         <div className="mx-auto mb-16 max-w-xl text-center">
-          <div className="mb-4 text-sm">Scale with the right plan</div>
+          <div className="mb-4 text-sm">
+            <TextExpand>Scale with the right plan</TextExpand>
+          </div>
           <h2 className="mb-6">
-            Plans built for every stage of your business growth
+            <TextExpand>
+              Plans built for every stage of your business growth
+            </TextExpand>
           </h2>
           <p className="opacity-60 lg:text-lg">
-            From startups to scaling teams, find the right plan to support every
-            stage of your journey.
+            <TextExpand>
+              From startups to scaling teams, find the right plan to support
+              every stage of your journey.
+            </TextExpand>
           </p>
         </div>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-3">
-          <div>
+          <SlideElement
+            direction="toLeft"
+            transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+          >
             <Card className="bg-neutral-950 text-white">
               <CardHeader>
                 <CardTitle>Free</CardTitle>
@@ -69,9 +80,12 @@ const Pricing = () => {
                 </ul>
               </CardContent>
             </Card>
-          </div>
+          </SlideElement>
 
-          <div>
+          <SlideElement
+            direction="toLeft"
+            transition={{ delay: 0.4, duration: 0.5, ease: "easeInOut" }}
+          >
             <Card className="bg-neutral-950 text-white">
               <CardHeader>
                 <CardTitle>Basic</CardTitle>
@@ -117,9 +131,12 @@ const Pricing = () => {
                 </ul>
               </CardContent>
             </Card>
-          </div>
+          </SlideElement>
 
-          <div>
+          <SlideElement
+            direction="toLeft"
+            transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+          >
             <Card className="bg-white text-neutral-950">
               <CardHeader>
                 <CardTitle>Scale</CardTitle>
@@ -168,7 +185,7 @@ const Pricing = () => {
                 </ul>
               </CardContent>
             </Card>
-          </div>
+          </SlideElement>
         </div>
       </div>
     </section>

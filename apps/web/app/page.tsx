@@ -4,6 +4,8 @@ import {
   IconPlayerPlayFilled,
 } from "@tabler/icons-react";
 import Image from "next/image";
+import SlideElement from "@/components/animation/SlideElement";
+import TextExpand from "@/components/animation/TextExpand";
 import { Button } from "@/components/ui/button";
 import { Slices } from "@/slices";
 
@@ -26,13 +28,24 @@ export default function Home() {
         <div className="flex flex-col items-center justify-center py-24 text-center">
           <div className="container mx-auto max-w-4xl px-4">
             <h1 className="mb-6">
-              Boost Business Efficiency With Our ERP solutions
+              <TextExpand
+                transition={{ delay: 0.3, duration: 0.5, ease: "easeInOut" }}
+              >
+                Boost Business Efficiency With Our ERP solutions
+              </TextExpand>
             </h1>
             <p className="mb-10 text-lg opacity-70">
-              Our ERP solutions designed to streamline operations, enhance
-              collaboration.
+              <TextExpand
+                transition={{ delay: 0.4, duration: 0.5, ease: "easeInOut" }}
+              >
+                Our ERP solutions designed to streamline operations, enhance
+                collaboration.
+              </TextExpand>
             </p>
-            <div className="flex flex-wrap items-center justify-center gap-6">
+            <SlideElement
+              className="flex flex-wrap items-center justify-center gap-6"
+              transition={{ delay: 0.5, duration: 0.5, ease: "easeInOut" }}
+            >
               <Button
                 className="h-16 rounded-full bg-white pe-1 text-base text-black"
                 size="lg"
@@ -53,12 +66,15 @@ export default function Home() {
                 </span>
                 Watch Demo
               </Button>
-            </div>
+            </SlideElement>
           </div>
         </div>
       </div>
       {/* Dashboard image */}
-      <div className="-translate-y-4">
+      <SlideElement
+        className="-translate-y-4"
+        transition={{ delay: 0.6, duration: 0.5, ease: "easeInOut" }}
+      >
         <div className="container mx-auto max-w-7xl px-4">
           <div className="rounded-2xl bg-white/20 p-2 backdrop-blur-md sm:p-4 md:p-6">
             <Image
@@ -71,7 +87,7 @@ export default function Home() {
             />
           </div>
         </div>
-      </div>
+      </SlideElement>
       <Slices.clients />
       <Slices.services />
       <Slices.about />
