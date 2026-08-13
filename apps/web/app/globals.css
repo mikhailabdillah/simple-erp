@@ -122,13 +122,39 @@
     @apply border-border outline-ring/50;
   }
   body {
-    @apply bg-background text-foreground;
+    @apply bg-background text-foreground font-sans;
   }
   button:not(:disabled),
   [role="button"]:not(:disabled) {
     cursor: pointer;
   }
-  html {
-    @apply font-sans;
+  h1 {
+    @apply text-5xl lg:text-6xl;
+  }
+  h2 {
+    @apply text-4xl lg:text-5xl;
+  }
+  h3 {
+    @apply text-3xl lg:text-4xl;
+  }
+  h4 {
+    @apply text-2xl lg:text-3xl;
+  }
+  h5 {
+    @apply text-xl lg:text-2xl;
+  }
+  h6 {
+    @apply text-lg lg:text-xl;
+  }
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    @apply font-heading font-semibold;
+  }
+  p {
+    @apply text-base mb-4;
   }
 }

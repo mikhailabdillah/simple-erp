@@ -25,14 +25,14 @@ export default function Home() {
       <div className="relative mt-40 mb-20 w-full text-white">
         <div className="flex flex-col items-center justify-center py-24 text-center">
           <div className="container mx-auto max-w-4xl px-4">
-            <h1 className="mb-6 text-6xl">
+            <h1 className="mb-6">
               Boost Business Efficiency With Our ERP solutions
             </h1>
             <p className="mb-10 text-lg opacity-70">
               Our ERP solutions designed to streamline operations, enhance
               collaboration.
             </p>
-            <div>
+            <div className="flex flex-wrap items-center justify-center gap-6">
               <Button
                 className="h-16 rounded-full bg-white text-base text-black"
                 size="lg"
